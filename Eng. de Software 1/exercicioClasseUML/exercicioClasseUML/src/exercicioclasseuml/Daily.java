@@ -11,8 +11,8 @@ package exercicioclasseuml;
 public class Daily {
     
     
-    Usuario usuario=new Usuario();
-    String conteudo;
+    private Usuario usuario;
+    private String conteudo;
 
     public void realizarDaily(Usuario usuario, String conteudo) {
         this.usuario = usuario;
@@ -29,6 +29,15 @@ public class Daily {
         return daily;
 
     }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public String getConteudo() {
+        return conteudo;
+    }
+
 
 
 

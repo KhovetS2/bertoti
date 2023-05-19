@@ -4,6 +4,9 @@
  */
 package exercicioclasseuml;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Fatec
@@ -12,15 +15,15 @@ public class Usuario {
 
     private String nome;
     private String senha;
+    private List<Daily> listaDaily;
 
 
-    public Usuario() {
-    }
     
 
     public Usuario(String nome, String senha) {
         this.nome = nome;
         this.senha = senha;
+        listaDaily = new ArrayList<>();
     }
 
 
@@ -36,8 +39,29 @@ public class Usuario {
         return this.senha;
     }
 
+    public List<Daily> getListaDaily() {
+        return this.listaDaily;
+    }
+
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public void adicionarDaily(Daily daily) {
+        listaDaily.add(daily);
+    }
+
+    public void removerDaily(Daily daily) {
+        listaDaily.remove(daily);
+    }
+
+    public Daily buscarDaily(String conteudo) {
+        for (Daily daily : listaDaily) {
+            if (daily.getConteudo().equals(conteudo)) {
+                return daily;
+            }
+        }
+        return null;
     }
 
 }

@@ -1,2 +1,2 @@
 # bertoti
-Trabalhos do professor
+Repositorio para os trabalhos do professor Giuliano

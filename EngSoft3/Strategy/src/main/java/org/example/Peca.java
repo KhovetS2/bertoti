@@ -1,3 +1,4 @@
+package org.example;
 
 /**
  * Peca
@@ -14,11 +15,11 @@ public class Peca {
 		this.pecaStrategy = pecaStrategy;
 	}
 
-	public void atacar() {
+	public void fazerAtaque() {
 		this.pecaStrategy.atacar();
 	}
 
-	public void movimentar() {
+	public void fazerMovimento() {
 		this.pecaStrategy.movimentar();
 	}
 
